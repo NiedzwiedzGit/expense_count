@@ -6,7 +6,7 @@ const ExpensesFilter = (props) => {
     const [dropValue, setDropValue] = useState('')
     useEffect(() => {
         // Zaktualizuj tytuł dokumentu korzystając z interfejsu API przeglądarki
-        if (dropValue == '') { test('2022') }
+        if (dropValue == '') { dropDownFilter('2022') }
     });
     const dropDownFilter = (e) => {
         if (dropValue == '' || dropValue != e) {

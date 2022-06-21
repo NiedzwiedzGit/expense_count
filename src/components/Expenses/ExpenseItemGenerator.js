@@ -1,6 +1,7 @@
 import './ExpenseItemGenerator.css';
 import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from '../ExpensesFilter/ExpensesFilter';
+import ExpensesList from './ExpensesList'
 import { useEffect, useState } from 'react'
 import Card from '../UI/Card';
 
@@ -19,6 +20,7 @@ function ExpenseItemGenerator(props) {
                 />
             }))
         }
+        console.log('row ',rows)
     })
 
     const yearSelected = (year) => {
@@ -35,7 +37,8 @@ function ExpenseItemGenerator(props) {
     return (
         <Card className='expenses'>
             <ExpensesFilter onExpenseYearFilter={yearSelected} />
-            {rows}
+            <ExpensesList
+            rows={rows}/>
         </Card>)
 }
 

@@ -13,7 +13,7 @@ function App() {
     { date: new Date, amount: '799 pln', title: 'test3', id: Date.now() }
   ])
   const addExpenseHandler = (expnce) => {
-    setExpense([...expense, expnce])
+    setExpense([expnce,...expense])
   }
   return (
     <div>
